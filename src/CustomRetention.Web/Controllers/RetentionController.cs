@@ -38,7 +38,7 @@ namespace CustomRetention.Web.Controllers
 
             // Fetch packages and group them (note:  only doing this for stable packages, ignoring prerelease)
             var packageRepository = PackageRepositoryFactory.Default.CreateRepository(feedUrl);
-            var packages = packageRepository.GetPackages().Where(p => p.Id == "GoogleAnalyticsTracker.Core").ToList();
+            var packages = packageRepository.GetPackages().Where(p => p.Id == payload.Payload.PackageIdentifier).ToList();
             foreach (var packageGroup in packages.Where(p => p.IsReleaseVersion())
                 .GroupBy(p => p.Version.Version.Major + "." + p.Version.Version.Minor))
             {
