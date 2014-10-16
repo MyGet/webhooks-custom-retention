@@ -1,6 +1,6 @@
 # Custom Retention
 
-
+Web project that can perform a custom retention policy for MyGet feeds. Uses webhooks to trigger whenever a new package is added to a feed.
 
 ## Deploy and Configure
 
@@ -8,8 +8,7 @@ The idea of this application is to create a custom retention policy. Therefore, 
 
 Two settings are available as utilities, and may (or may not) be used by your custom code:
 
-* ```Signature:NuGetFeedUrl``` - NuGet feed to work with
-* ```Signature:NuGetFeedApiKey``` - API key for performing operations on the above feed
+* ```Signature:NuGetFeedApiKey``` - API key for performing operations on the feed that triggers the web hook
 
 ## Setup a MyGet Webhook
 
