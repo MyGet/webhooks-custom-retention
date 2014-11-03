@@ -12,7 +12,7 @@ namespace CustomRetention.Web
             config.Formatters.Add(
                 new TypedJsonMediaTypeFormatter(
                      typeof(WebHookEvent),
-                     new MediaTypeHeaderValue("application/vnd.myget.webhooks.v1.preview+json")));
+                     new MediaTypeHeaderValue("application/vnd.myget.webhooks.v1+json")));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
